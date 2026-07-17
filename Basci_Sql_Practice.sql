@@ -414,6 +414,60 @@ ordenumber int not null,
 personID int ,foreign key(personID) references person1(personID)
 );
 
+
+
+
+#ADVANCE MYSQL ===================================================================
+show databases;
+use abhidb;
+select *from forcast_report;
+
+select weather ,temperature from forcast_report;
+rename table forcast_report to forcast;
+desc forcast;
+select * from forcast;
+
+# LIMIT
+select * from forcast limit 10;
+
+
+# DISTINCT (Get the unique value from column)
+select distinct passanger from forcast;
+select distinct time from forcast; 
+#select distinct temperature from forcast where temperature<80 ;
+
+
+
+# WHERE 
+select *from forcast where destination = "Home";
+select *from forcast where temperature<80;
+
+
+
+# ORDER BY
+select *from forcast order by coupon;
+
+# ALIASING
+select destination as 'destination' from forcast;
+
+# COMENTS
+#select * -- this is a comment from forcast;
+
+# GROUPBY
+select occupation from forcast group by occupation;
+
+
+# AVG
+select weather ,AVG(temperature) AS 'avg_temp' from forcast group by weather;
+select weather ,COUNT(temperature) AS 'count_temp' FROM forcast GROUP BY weather;
+select weather ,SUM(temperature) AS 'count_temp' FROM forcast GROUP BY weather;
+select weather ,MAX(temperature) AS 'count_temp' FROM forcast GROUP BY weather;
+select weather ,MIN(temperature) AS 'count_temp' FROM forcast GROUP BY weather;
+
+
+SELECT occupation FROM forcast GROUP BY occupation HAVING occupation ="STUDENT";
+
+
 desc personorder;
 alter table personorder add primary key (ordernumber);
 
