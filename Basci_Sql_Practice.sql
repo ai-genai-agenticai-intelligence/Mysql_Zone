@@ -67,6 +67,7 @@ delete from student where id =5;
 delete from student where id =4;
 
 
+
 #6.FUNCTION ==========================================
  select sum(MARKS) from student;
  select avg(MARKS) from student;
@@ -280,6 +281,7 @@ select * from Students;
 
 
 #10. DDL Command[CREATE/ALTER/DROP/TRUNCATE/RENAME]==================================================
+ 
 # DDL (Data Definition Language) commands are used to define or modify the structure of database objects such as tables
 
 drop table abhishek;
